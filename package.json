@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^25.4.0",
+    "playwright": "^1.58.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "name": "ai-browser-skill",
+  "version": "1.0.0",
+  "description": "# ai-browser-skill\n This is a skill demo that calls the browser's ability.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonWX/ai-browser-skill.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonWX/ai-browser-skill/issues"
+  },
+  "homepage": "https://github.com/SimonWX/ai-browser-skill#readme"
+}
