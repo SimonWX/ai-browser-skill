@@ -1,14 +1,17 @@
 import { createBrowser } from "./browser.ts";
-import { openPage } from "./actions/openPage.ts";
-// import { typeText } from "./actions/typeText.ts";
-import { extractText } from "./actions/extractText.ts";
+import { execute } from "./executor.ts";
 
 async function run() {
   const { browser, page } = await createBrowser();
-  await openPage(page, "https://news.ycombinator.com");
-  //   await typeText(page, "input[name='q']", "openlayers");
-  const title = await extractText(page, ".titleline a");
-  console.log("首页标题", title);
+  await execute(page, "open_page", {
+    url: "https://github.com",
+  });
+  await page.waitForTimeout(2000);
+  await page.locator('button[placeholder="Search or jump to..."]').click();
+  await execute(page, "type_text", {
+    selector: "input[id='query-builder-test']",
+    text: "wechat-pay",
+  });
 }
 
 run();
